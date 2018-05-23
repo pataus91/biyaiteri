@@ -27,7 +27,6 @@ function removeVip ($name, $message)
 	}
 }
 
-
 function addVip ($names) 
 {
 	$file = 'vip.txt';
