@@ -1,3 +1,7 @@
+<?php
+include 'add_vip.php';
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -48,6 +52,9 @@
 	   ?>
 	 </tbody>
 </table>
-
+	<br>
+	<form action="list_vip.php" method="get" accept-charset="utf-8">
+		<label>Ajouter: <input type="text" name="ajouter" value="<?php echo $add ?>"></label>
+		<input type="submit" name="" value="Valider">
 </body>
 </html>

@@ -4,7 +4,7 @@ $siege = '';
 $price = '';
 $vip = '';
 
-// isset = Determine if a variable is set and is not NULL
+// isset = Determine if a variable is set and is not NULL.
 if (isset($_GET["price"]) && isset($_GET["vip"])) {
 	// Formulaire submitted
 	$price = $_GET["price"];
