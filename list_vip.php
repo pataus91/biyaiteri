@@ -1,7 +1,3 @@
-<?php
-include 'add_vip.php';
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,7 +35,7 @@ include 'add_vip.php';
 		   	$listvip = file_get_contents($file);
 		 	$array = explode(', ', $listvip);
 
-		 	foreach ($array as $key => $name) {
+		 	foreach ($array as $name) {
 		        ?> 
 		        <tr>
 		          <td><?php echo $name; ?></td>
@@ -53,8 +49,9 @@ include 'add_vip.php';
 	 </tbody>
 </table>
 	<br>
-	<form action="list_vip.php" method="get" accept-charset="utf-8">
-		<label>Ajouter: <input type="text" name="ajouter" value="<?php echo $add ?>"></label>
+<!-- action dit dans quel code renvoyer les info que je suis en train de sumettre	
+ -->	<form action="add_vip.php" method="get" accept-charset="utf-8">
+		<label>Ajouter: <input type="text" name="vip"></label>
 		<input type="submit" name="" value="Valider">
 </body>
 </html>

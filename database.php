@@ -2,7 +2,7 @@
 
 //code delle funzioni add e remove connesse a index_vip
 
-function removeVip ($name, $message) 
+function removeVip ($name) 
 {
 	$file = 'vip.txt';
 
@@ -13,7 +13,6 @@ function removeVip ($name, $message)
 	 	foreach ($array as $key => $value) {
 	 		if ($value === $name) {
 	 			unset($array[$key]);
-	 			$message = "Nome bien supprimé";
 	 		}
 	 	} 
 
@@ -23,7 +22,6 @@ function removeVip ($name, $message)
 			$newlistvip = implode(", ", $array);
 			file_put_contents($file, $newlistvip);
 		}
-		return $message;
 	}
 }
 
