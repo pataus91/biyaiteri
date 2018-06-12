@@ -1,0 +1,34 @@
+Hello quentino,
+
+Voici quelques notes à propos de mon code.
+
+Si le Nom et le mdp sont bonne, la personne est redirigé au database.
+
+Par contre, si le nom et le mdp existent, je fais header et je les fais revenir à la page d'authentication. J'aurais pu mettre simplement une message d'erreur, mais il s'affichent plusieurs fois puisque il s'agit d'un foreach. 
+J'ai du coup utilisé header. Par contre, comme dit le doc, après header on peut faire rien (pas d'echo de message, par exemple).
+Sur internet j'ai trouvé cette solution, mais que j'arrive pas à faire marcher:
+
+In affichage_nom.php
+header('Location: authentication_page.php?msg');
+
+
+In authentincation_page.php après </form>
+<?	
+	if(isset($_GET['msg']))
+    {
+        $Message = "Some error occured please try after some time";
+        echo $Message
+        
+	}
+    ?>
+
+Enfin, dans le cas que nom et/ou mdp n'existe pas, je fais echo "Invlid...". A nouveau je ppourrais faire une header, mais j'aurais aucun message.
+
+J'éspère qu'il est claire :) 
+
+
+
+
+
+
+
