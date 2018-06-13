@@ -6,13 +6,20 @@
 <body>
 	Bonjour<br>
 	Veuillez rentrer votre nom utilisatuer et mot de passe.
-	<form action="affichage_nom.php" method="get" accept-charset="utf-8">
+	<form action="log_in.php" method="get" accept-charset="utf-8">
 		<label>Nom: <input type="text" name="nom" ></label>
 		<br>
 		<label>mdp: <input type="text" name="mdp" ></label>
 		<br>
 		<input type="submit" name="" value="Valider">
 	</form>
+	<!-- <?php
+	if(isset($_GET['error']))
+    {
+        $Message = "Invalid Username or password";
+        echo $Message;
+    }
+    ?> -->
 </body>
 </html>
 
