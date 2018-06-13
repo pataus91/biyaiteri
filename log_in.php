@@ -6,7 +6,7 @@ if (isset($_GET["nom"]) && isset($_GET["mdp"])) {
 	$mdp = $_GET["mdp"];
 	$usernames = array('Silvia', 'Quentino', 'Sami', 'Raph');
 	$passwords = array ('silvia', 'quentino', 'sami', 'raph');
-	if (in_array($nom, $usernames) && in_array($mdp, $passwords)){
+	if (in_array($nom, $usernames)){
 		$login = array_combine($usernames, $passwords);
 		foreach ($login as $key => $value) {
 			if ($value === $mdp && $key === $nom) {
