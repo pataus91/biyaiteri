@@ -16,6 +16,7 @@ if (isset($_GET["nom"]) && isset($_GET["mdp"])) {
 		foreach ($credentials as $key => $value) {
 			if ($value === $mdp && $key === $nom) {
 				header('Location: list_vip.php');
+				die;
 			} 	
 		}	
 		$message = "Invalid password";	
