@@ -13,13 +13,12 @@
 		<br>
 		<input type="submit" name="" value="Valider">
 	</form>
-	<!-- <?php
-	if(isset($_GET['error']))
+	<?php
+	if(isset($_GET['message']))
     {
-        $Message = "Invalid Username or password";
-        echo $Message;
+        echo $_GET['message'];
     }
-    ?> -->
+    ?>
 </body>
 </html>
 

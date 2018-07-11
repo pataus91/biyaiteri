@@ -1,6 +1,5 @@
 <?php
 
-
 if (isset($_GET["nom"]) && isset($_GET["mdp"])) {
 	$nom = $_GET["nom"];
 	$mdp = $_GET["mdp"];
@@ -19,10 +18,11 @@ if (isset($_GET["nom"]) && isset($_GET["mdp"])) {
 				header('Location: list_vip.php');
 			} 	
 		}	
-		echo "Invalid password";
+		$message = "Invalid password";	
 	} else {
-		echo "Invalid Username";
+		$message = "Invalid Username";
 	}
+	header('Location: authentication_page.php?message=' . $message);
 }
 
 
