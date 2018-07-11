@@ -17,13 +17,10 @@ if (isset($_GET["nom"]) && isset($_GET["mdp"])) {
 		foreach ($credentials as $key => $value) {
 			if ($value === $mdp && $key === $nom) {
 				header('Location: list_vip.php');
-			} 
-			else {
-				echo "Invalid password";
-			}
+			} 	
 		}	
-	}
-	 else {
+		echo "Invalid password";
+	} else {
 		echo "Invalid Username";
 	}
 }
