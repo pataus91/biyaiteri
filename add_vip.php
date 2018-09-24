@@ -1,7 +1,10 @@
 <?php
 
 $name = $_GET['name'];
+$errorMes = "This field is required";
 
-echo $name . " bien ajouté.";
-
-
+if($name !== "") {
+	include 'affichage_add_vip_success.phtml';
+} else {
+	echo $errorMes;	
+}
